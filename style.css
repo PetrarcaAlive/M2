@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    font-family: Roboto;
+
+    position: absolute;
+    width: 40%;
+    min-height: 40%;
+
+    margin-top: 10%;
+    margin-left: 30%;
+
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.yellow-line {
+    background: #FFDC40;
+    position: relative;
+    top: 0;
+    margin-bottom: 3%;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-sort {
+    position: relative;
+    left: 70%;
+    cursor: pointer;
+}
+
+.item-box {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+.item {
+    display: flex;
+    height: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.item:hover {
+    background-color: #FFDC40;
+    border-radius: 10px;
+}
+
+.item:hover .input-zone {
+    background-color: #FFDC40;
+}
+
+.button-dnd {
+    margin-left: 1%;
+}
+
+.input-zone {
+    width: 100%;
+    border: white;
+    height: 100%;
+    outline: none;
+}
+
+.button-remove {
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+.button-add-wrapper {
+    display: flex;
+    position: relative;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-add {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button-p {
+    color: black;
+    display: flex;
+    position: relative;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
