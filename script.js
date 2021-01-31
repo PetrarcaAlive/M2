@@ -2,10 +2,10 @@ const removeButton = document.querySelectorAll('.button-remove');
 const sortButton = document.querySelector('.button-sort');
 const item = document.querySelector('.item');
 const buttonAdd = document.querySelector('.button-add');
-let itemBox = document.querySelector('.item-box');
+const itemBox = document.querySelector('.item-box');
 let input = document.querySelectorAll('.input-zone');
-
 let tracker = 'sort';
+let dragMe;
 
 // Новая строка
 buttonAdd.addEventListener('click', () => {
@@ -15,6 +15,26 @@ buttonAdd.addEventListener('click', () => {
     changeColor(newItem.lastElementChild);
     let removeString = newItem.querySelector('.button-remove');
     removeItem(removeString);
+    //////////////
+    const element = document.querySelectorAll('.item')
+    element.forEach((i) =>{
+        i.addEventListener('dragstart', (evt) => {
+            dragMe = evt.target;
+    })
+        i.addEventListener('dragend', (evt) => {
+            dragMe = undefined;
+        })
+    })
+})
+itemBox.addEventListener('dragenter', (evt) => {
+    evt.preventDefault()
+})
+itemBox.addEventListener('dragover', (evt) => {
+    evt.preventDefault()
+})
+itemBox.addEventListener('drop', (evt) => {
+    evt.preventDefault()
+    itemBox.insertBefore(dragMe, evt.target.parentElement);
 })
 //Смена цвета
 function changeColor(item) {
