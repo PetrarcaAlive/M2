@@ -11,11 +11,11 @@ main {
     font-family: Roboto;
 
     position: absolute;
-    width: 40%;
+    width: 20%;
     min-height: 40%;
 
     margin-top: 10%;
-    margin-left: 30%;
+    margin-left: 40%;
 
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ h1 {
 
 .button-sort {
     position: relative;
-    left: 70%;
+    left: 75%;
     cursor: pointer;
 }
 
@@ -56,9 +56,13 @@ h1 {
 
 .item {
     display: flex;
-    height: 2rem;
+    height: 3rem;
     width: 100%;
     align-items: center;
+}
+
+input {
+    font-size: 1rem;
 }
 
 .item:hover {
@@ -71,18 +75,28 @@ h1 {
 }
 
 .button-dnd {
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 .input-zone {
-    width: 100%;
+    width: 80%;
+    margin-left: 5%;
     border: white;
     height: 100%;
     outline: none;
 }
 
+.spreader {
+    height: 2px;
+    background-color: #833AE0;
+}
+
+.hidden {
+    display: none;
+}
+
 .button-remove {
-    margin-right: 1%;
+    margin-right: 2%;
     cursor: pointer;
 }
 

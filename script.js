@@ -7,6 +7,9 @@ let input = document.querySelectorAll('.input-zone');
 let tracker = 'sort';
 let dragMe;
 
+let spreader = document.createElement('div')
+spreader.classList.add('spreader')
+
 // Новая строка
 buttonAdd.addEventListener('click', () => {
     const newItem = item.cloneNode(true);
@@ -31,9 +34,12 @@ itemBox.addEventListener('dragenter', (evt) => {
 })
 itemBox.addEventListener('dragover', (evt) => {
     evt.preventDefault()
+    spreader.classList.remove('hidden')
+    itemBox.insertBefore(spreader, evt.target.parentElement)
 })
 itemBox.addEventListener('drop', (evt) => {
     evt.preventDefault()
+    spreader.classList.add('hidden')
     itemBox.insertBefore(dragMe, evt.target.parentElement);
 })
 //Смена цвета
