@@ -7,6 +7,8 @@ let input = document.querySelectorAll('.input-zone');
 let tracker = 'sort';
 let dragMe;
 
+
+
 let spreader = document.createElement('div')
 spreader.classList.add('spreader')
 
@@ -34,13 +36,17 @@ itemBox.addEventListener('dragenter', (evt) => {
 })
 itemBox.addEventListener('dragover', (evt) => {
     evt.preventDefault()
+
+    const itemBefore = evt.target.closest('.item')
+
     spreader.classList.remove('hidden')
-    itemBox.insertBefore(spreader, evt.target.parentElement)
+    itemBox.insertBefore(spreader, itemBefore)
 })
 itemBox.addEventListener('drop', (evt) => {
     evt.preventDefault()
+    const itemBefore = evt.target.closest('.item')
     spreader.classList.add('hidden')
-    itemBox.insertBefore(dragMe, evt.target.parentElement);
+    itemBox.insertBefore(dragMe, itemBefore);
 })
 //Смена цвета
 function changeColor(item) {
